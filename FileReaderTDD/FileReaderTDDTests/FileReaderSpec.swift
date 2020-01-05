@@ -48,17 +48,19 @@ class FileReaderSpec: QuickSpec {
             describe("read") {
                 var fileContents: String?
 
-                beforeEach {
-                    fileContents = try? sut.read(path: "a-021-293-121-test.txt")
-                }
-
                 afterEach {
                     fileContents = nil
                 }
 
-                it("should return content read from a file") {
-                    expect(fileContents).toNot(beNil())
-                    expect(fileContents) == "FILE CONTENTS"
+                context("with existing file") {
+                    beforeEach {
+                        fileContents = try? sut.read(path: "a-021-293-121-test.txt")
+                    }
+
+                    it("should return content read from a file") {
+                        expect(fileContents).toNot(beNil())
+                        expect(fileContents) == "FILE CONTENTS"
+                    }
                 }
             }
         }

@@ -24,14 +24,18 @@ class FileReader {
 class FileReaderSpec: QuickSpec {
     override func spec() {
         describe("FileReader") {
+            var fileManager: FileManagerStub!
             var sut: FileReader!
 
             beforeEach {
-                sut = FileReader(fileManager: FileManager.default,
+                fileManager = FileManagerStub()
+                fileManager.stubbedDocumentsURLs = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+                sut = FileReader(fileManager: fileManager,
                                  urlReader: String.init(contentsOf:))
             }
 
             afterEach {
+                fileManager = nil
                 sut = nil
             }
 

@@ -30,8 +30,15 @@ class FileReaderSpec: QuickSpec {
             beforeEach {
                 fileManager = FileManagerStub()
                 fileManager.stubbedDocumentsURLs = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-                sut = FileReader(fileManager: fileManager,
-                                 urlReader: String.init(contentsOf:))
+                sut = FileReader(fileManager: fileManager) { url in
+                    let expectedURL = fileManager.documentsURL?.appendingPathComponent("a-021-293-121-test.txt")
+
+                    guard expectedURL! == url else {
+                        fatalError()
+                    }
+
+                    return "FILE CONTENTS"
+                }
             }
 
             afterEach {

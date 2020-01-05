@@ -10,10 +10,11 @@ func fileReader(path: String) -> String? {
 class FileReaderSpec: QuickSpec {
     override func spec() {
         describe("fileReader") {
-            var documentsURL: String?
+            var documentsURL: URL?
             var fileContents: String?
 
             beforeEach {
+                documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last
                 fileContents = fileReader(path: "a-021-293-121-test.txt")
             }
 

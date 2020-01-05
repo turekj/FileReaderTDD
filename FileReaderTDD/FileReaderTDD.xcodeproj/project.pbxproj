@@ -19,6 +19,7 @@
 		8C2B666A23C24C69003D4306 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8C2B666623C24C41003D4306 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8C2B666B23C24C69003D4306 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8C2B666523C24C41003D4306 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8C2B666D23C25163003D4306 /* FileManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B666C23C25163003D4306 /* FileManagerSpec.swift */; };
+		8C2B667023C252B1003D4306 /* FileManager+DocumentsURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B666F23C252B1003D4306 /* FileManager+DocumentsURL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		8C2B666523C24C41003D4306 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		8C2B666623C24C41003D4306 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		8C2B666C23C25163003D4306 /* FileManagerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerSpec.swift; sourceTree = "<group>"; };
+		8C2B666F23C252B1003D4306 /* FileManager+DocumentsURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+DocumentsURL.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 		8C2B664123C24B00003D4306 /* FileReaderTDD */ = {
 			isa = PBXGroup;
 			children = (
+				8C2B666E23C252A4003D4306 /* Extensions */,
 				8C2B664223C24B00003D4306 /* AppDelegate.swift */,
 				8C2B664423C24B00003D4306 /* SceneDelegate.swift */,
 				8C2B664623C24B00003D4306 /* ViewController.swift */,
@@ -132,6 +135,14 @@
 				8C2B666523C24C41003D4306 /* Quick.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8C2B666E23C252A4003D4306 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8C2B666F23C252B1003D4306 /* FileManager+DocumentsURL.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C2B667023C252B1003D4306 /* FileManager+DocumentsURL.swift in Sources */,
 				8C2B664723C24B00003D4306 /* ViewController.swift in Sources */,
 				8C2B664323C24B00003D4306 /* AppDelegate.swift in Sources */,
 				8C2B664523C24B00003D4306 /* SceneDelegate.swift in Sources */,

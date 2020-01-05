@@ -1,11 +1,6 @@
 import Nimble
 import Quick
-
-extension FileManager {
-    var documentsURL: URL? {
-        return urls(for: .documentDirectory, in: .userDomainMask).last
-    }
-}
+@testable import FileReaderTDD
 
 class FileManagerSpec: QuickSpec {
     override func spec() {

@@ -13,7 +13,11 @@
 		8C2B664A23C24B00003D4306 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2B664823C24B00003D4306 /* Main.storyboard */; };
 		8C2B664C23C24B02003D4306 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C2B664B23C24B02003D4306 /* Assets.xcassets */; };
 		8C2B664F23C24B02003D4306 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2B664D23C24B02003D4306 /* LaunchScreen.storyboard */; };
-		8C2B665A23C24B02003D4306 /* FileReaderTDDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B665923C24B02003D4306 /* FileReaderTDDTests.swift */; };
+		8C2B665A23C24B02003D4306 /* FileReaderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B665923C24B02003D4306 /* FileReaderSpec.swift */; };
+		8C2B666723C24C41003D4306 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C2B666523C24C41003D4306 /* Quick.framework */; };
+		8C2B666823C24C41003D4306 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C2B666623C24C41003D4306 /* Nimble.framework */; };
+		8C2B666A23C24C69003D4306 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8C2B666623C24C41003D4306 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8C2B666B23C24C69003D4306 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8C2B666523C24C41003D4306 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +30,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8C2B666923C24C60003D4306 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8C2B666A23C24C69003D4306 /* Nimble.framework in CopyFiles */,
+				8C2B666B23C24C69003D4306 /* Quick.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		8C2B663F23C24B00003D4306 /* FileReaderTDD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FileReaderTDD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C2B664223C24B00003D4306 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,8 +54,10 @@
 		8C2B664E23C24B02003D4306 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C2B665023C24B02003D4306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C2B665523C24B02003D4306 /* FileReaderTDDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FileReaderTDDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C2B665923C24B02003D4306 /* FileReaderTDDTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileReaderTDDTests.swift; sourceTree = "<group>"; };
+		8C2B665923C24B02003D4306 /* FileReaderSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileReaderSpec.swift; sourceTree = "<group>"; };
 		8C2B665B23C24B02003D4306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C2B666523C24C41003D4306 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		8C2B666623C24C41003D4306 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +72,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C2B666723C24C41003D4306 /* Quick.framework in Frameworks */,
+				8C2B666823C24C41003D4306 /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +86,7 @@
 				8C2B664123C24B00003D4306 /* FileReaderTDD */,
 				8C2B665823C24B02003D4306 /* FileReaderTDDTests */,
 				8C2B664023C24B00003D4306 /* Products */,
+				8C2B666423C24C41003D4306 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,10 +116,19 @@
 		8C2B665823C24B02003D4306 /* FileReaderTDDTests */ = {
 			isa = PBXGroup;
 			children = (
-				8C2B665923C24B02003D4306 /* FileReaderTDDTests.swift */,
+				8C2B665923C24B02003D4306 /* FileReaderSpec.swift */,
 				8C2B665B23C24B02003D4306 /* Info.plist */,
 			);
 			path = FileReaderTDDTests;
+			sourceTree = "<group>";
+		};
+		8C2B666423C24C41003D4306 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C2B666623C24C41003D4306 /* Nimble.framework */,
+				8C2B666523C24C41003D4306 /* Quick.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +158,7 @@
 				8C2B665123C24B02003D4306 /* Sources */,
 				8C2B665223C24B02003D4306 /* Frameworks */,
 				8C2B665323C24B02003D4306 /* Resources */,
+				8C2B666923C24C60003D4306 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -210,7 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C2B665A23C24B02003D4306 /* FileReaderTDDTests.swift in Sources */,
+				8C2B665A23C24B02003D4306 /* FileReaderSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +434,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q77FN535PU;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = FileReaderTDDTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -423,6 +460,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q77FN535PU;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = FileReaderTDDTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -26,6 +26,7 @@
 		8C2B667B23C25DFF003D4306 /* URLReaderStubFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B667A23C25DFF003D4306 /* URLReaderStubFactory.swift */; };
 		8C2B667E23C261FC003D4306 /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B667D23C261FC003D4306 /* FileReader.swift */; };
 		8C2B668023C26220003D4306 /* FileReaderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B667F23C26220003D4306 /* FileReaderError.swift */; };
+		8C2B668223C262A3003D4306 /* DropPrefixSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B668123C262A3003D4306 /* DropPrefixSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		8C2B667A23C25DFF003D4306 /* URLReaderStubFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLReaderStubFactory.swift; sourceTree = "<group>"; };
 		8C2B667D23C261FC003D4306 /* FileReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileReader.swift; sourceTree = "<group>"; };
 		8C2B667F23C26220003D4306 /* FileReaderError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileReaderError.swift; sourceTree = "<group>"; };
+		8C2B668123C262A3003D4306 /* DropPrefixSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropPrefixSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 				8C2B666C23C25163003D4306 /* FileManagingSpec.swift */,
 				8C2B665923C24B02003D4306 /* FileReaderSpec.swift */,
 				8C2B665B23C24B02003D4306 /* Info.plist */,
+				8C2B668123C262A3003D4306 /* DropPrefixSpec.swift */,
 			);
 			path = FileReaderTDDTests;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 			files = (
 				8C2B666D23C25163003D4306 /* FileManagingSpec.swift in Sources */,
 				8C2B665A23C24B02003D4306 /* FileReaderSpec.swift in Sources */,
+				8C2B668223C262A3003D4306 /* DropPrefixSpec.swift in Sources */,
 				8C2B667B23C25DFF003D4306 /* URLReaderStubFactory.swift in Sources */,
 				8C2B667923C25867003D4306 /* FileManagerStub.swift in Sources */,
 			);

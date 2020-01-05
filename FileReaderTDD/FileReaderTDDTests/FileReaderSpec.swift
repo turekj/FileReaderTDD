@@ -29,15 +29,15 @@ class FileReaderSpec: QuickSpec {
 
             beforeEach {
                 fileManager = FileManagerStub()
-                sut = FileReader(fileManager: fileManager) { url in
-                    let expectedURL = "/var/data/documents/a-021-293-121-test.txt"
 
-                    guard URL(string: expectedURL)! == url else {
-                        fatalError()
-                    }
+                let files: [String: String] = [
+                    "/var/data/documents/a-021-293-121-test.txt": "FILE CONTENTS"
+                ]
 
-                    return "FILE CONTENTS"
-                }
+                sut = FileReader(
+                    fileManager: fileManager,
+                    urlReader: URLReaderStubFactory.make(files)
+                )
             }
 
             afterEach {

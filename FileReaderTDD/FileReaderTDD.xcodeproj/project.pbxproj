@@ -23,6 +23,7 @@
 		8C2B667523C2563E003D4306 /* FileManager+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B667423C2563E003D4306 /* FileManager+Protocol.swift */; };
 		8C2B667623C2572A003D4306 /* FileManaging+DocumentsURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B666F23C252B1003D4306 /* FileManaging+DocumentsURL.swift */; };
 		8C2B667923C25867003D4306 /* FileManagerStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B667823C25867003D4306 /* FileManagerStub.swift */; };
+		8C2B667B23C25DFF003D4306 /* URLReaderStubFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B667A23C25DFF003D4306 /* URLReaderStubFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		8C2B667223C2561D003D4306 /* FileManaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManaging.swift; sourceTree = "<group>"; };
 		8C2B667423C2563E003D4306 /* FileManager+Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Protocol.swift"; sourceTree = "<group>"; };
 		8C2B667823C25867003D4306 /* FileManagerStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerStub.swift; sourceTree = "<group>"; };
+		8C2B667A23C25DFF003D4306 /* URLReaderStubFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLReaderStubFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				8C2B667823C25867003D4306 /* FileManagerStub.swift */,
+				8C2B667A23C25DFF003D4306 /* URLReaderStubFactory.swift */,
 			);
 			path = Stubs;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 			files = (
 				8C2B666D23C25163003D4306 /* FileManagingSpec.swift in Sources */,
 				8C2B665A23C24B02003D4306 /* FileReaderSpec.swift in Sources */,
+				8C2B667B23C25DFF003D4306 /* URLReaderStubFactory.swift in Sources */,
 				8C2B667923C25867003D4306 /* FileManagerStub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,7 +14,11 @@ class FileReader {
             fatalError()
         }
 
-        return try urlReader(documentsURL)
+        do {
+            return try urlReader(documentsURL)
+        } catch {
+            throw FileReaderError.missingFile(path: documentsURL.absoluteString)
+        }
     }
 
     private let fileManager: FileManaging

@@ -12,12 +12,12 @@ class FileReaderSpec: QuickSpec {
                 fileManager = FileManagerStub()
 
                 let files: [String: String] = [
-                    "/var/data/documents/a-021-293-121-test.txt": "FILE CONTENTS"
+                    "a-021-293-121-test.txt": "FILE CONTENTS"
                 ]
 
                 sut = FileReader(
                     fileManager: fileManager,
-                    urlReader: URLReaderStubFactory.make(files)
+                    urlReader: URLReaderStubFactory.make(files, fileManager.documentsURL)
                 )
             }
 

@@ -3,8 +3,8 @@ import Foundation
 
 class FileManagerStub: FileManaging {
     var stubbedDocumentsURLs: [URL] = [
-        URL(string: "/var/data/derived")!,
-        URL(string: "/var/data/documents")!,
+        URL(string: "/var/data/derived/")!,
+        URL(string: "/var/data/documents/")!,
     ]
 
     func urls(for directory: FileManager.SearchPathDirectory,

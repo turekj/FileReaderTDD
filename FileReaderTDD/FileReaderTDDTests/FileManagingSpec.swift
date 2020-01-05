@@ -51,7 +51,7 @@ class FileManagingSpec: QuickSpec {
 
                     it("should return the correct documents URL") {
                         expect(documentsURL).toNot(beNil())
-                        expect(documentsURL?.absoluteString) == "/var/data/documents"
+                        expect(documentsURL?.absoluteString) == "/var/data/documents/"
                     }
                 }
             }

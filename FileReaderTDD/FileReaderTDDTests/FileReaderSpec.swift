@@ -3,8 +3,11 @@ import Quick
 @testable import FileReaderTDD
 
 class FileReader {
+    init(fileManager: FileManaging) {
+        self.fileManager = fileManager
+    }
+
     func read(path: String,
-              fileManager: FileManaging = FileManager.default,
               urlReader: (URL) throws -> String = String.init(contentsOf:)) throws -> String {
         guard let documentsURL = fileManager.documentsURL?.appendingPathComponent(path) else {
             fatalError()
@@ -12,6 +15,8 @@ class FileReader {
 
         return try urlReader(documentsURL)
     }
+
+    private let fileManager: FileManaging
 }
 
 class FileReaderSpec: QuickSpec {
@@ -20,7 +25,7 @@ class FileReaderSpec: QuickSpec {
             var sut: FileReader!
 
             beforeEach {
-                sut = FileReader()
+                sut = FileReader(fileManager: FileManager.default)
             }
 
             afterEach {

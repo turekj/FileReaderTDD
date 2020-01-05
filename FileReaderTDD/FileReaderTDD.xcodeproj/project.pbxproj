@@ -24,6 +24,8 @@
 		8C2B667623C2572A003D4306 /* FileManaging+DocumentsURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B666F23C252B1003D4306 /* FileManaging+DocumentsURL.swift */; };
 		8C2B667923C25867003D4306 /* FileManagerStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B667823C25867003D4306 /* FileManagerStub.swift */; };
 		8C2B667B23C25DFF003D4306 /* URLReaderStubFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B667A23C25DFF003D4306 /* URLReaderStubFactory.swift */; };
+		8C2B667E23C261FC003D4306 /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B667D23C261FC003D4306 /* FileReader.swift */; };
+		8C2B668023C26220003D4306 /* FileReaderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B667F23C26220003D4306 /* FileReaderError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		8C2B667423C2563E003D4306 /* FileManager+Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Protocol.swift"; sourceTree = "<group>"; };
 		8C2B667823C25867003D4306 /* FileManagerStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerStub.swift; sourceTree = "<group>"; };
 		8C2B667A23C25DFF003D4306 /* URLReaderStubFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLReaderStubFactory.swift; sourceTree = "<group>"; };
+		8C2B667D23C261FC003D4306 /* FileReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileReader.swift; sourceTree = "<group>"; };
+		8C2B667F23C26220003D4306 /* FileReaderError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileReaderError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,15 +118,16 @@
 		8C2B664123C24B00003D4306 /* FileReaderTDD */ = {
 			isa = PBXGroup;
 			children = (
-				8C2B667123C2560B003D4306 /* Protocols */,
 				8C2B666E23C252A4003D4306 /* Extensions */,
+				8C2B667123C2560B003D4306 /* Protocols */,
+				8C2B667C23C261E8003D4306 /* Reader */,
 				8C2B664223C24B00003D4306 /* AppDelegate.swift */,
+				8C2B664B23C24B02003D4306 /* Assets.xcassets */,
+				8C2B665023C24B02003D4306 /* Info.plist */,
+				8C2B664D23C24B02003D4306 /* LaunchScreen.storyboard */,
+				8C2B664823C24B00003D4306 /* Main.storyboard */,
 				8C2B664423C24B00003D4306 /* SceneDelegate.swift */,
 				8C2B664623C24B00003D4306 /* ViewController.swift */,
-				8C2B664823C24B00003D4306 /* Main.storyboard */,
-				8C2B664B23C24B02003D4306 /* Assets.xcassets */,
-				8C2B664D23C24B02003D4306 /* LaunchScreen.storyboard */,
-				8C2B665023C24B02003D4306 /* Info.plist */,
 			);
 			path = FileReaderTDD;
 			sourceTree = "<group>";
@@ -171,6 +176,15 @@
 				8C2B667A23C25DFF003D4306 /* URLReaderStubFactory.swift */,
 			);
 			path = Stubs;
+			sourceTree = "<group>";
+		};
+		8C2B667C23C261E8003D4306 /* Reader */ = {
+			isa = PBXGroup;
+			children = (
+				8C2B667D23C261FC003D4306 /* FileReader.swift */,
+				8C2B667F23C26220003D4306 /* FileReaderError.swift */,
+			);
+			path = Reader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,8 +291,10 @@
 			files = (
 				8C2B667623C2572A003D4306 /* FileManaging+DocumentsURL.swift in Sources */,
 				8C2B667323C2561D003D4306 /* FileManaging.swift in Sources */,
+				8C2B667E23C261FC003D4306 /* FileReader.swift in Sources */,
 				8C2B664723C24B00003D4306 /* ViewController.swift in Sources */,
 				8C2B664323C24B00003D4306 /* AppDelegate.swift in Sources */,
+				8C2B668023C26220003D4306 /* FileReaderError.swift in Sources */,
 				8C2B664523C24B00003D4306 /* SceneDelegate.swift in Sources */,
 				8C2B667523C2563E003D4306 /* FileManager+Protocol.swift in Sources */,
 			);

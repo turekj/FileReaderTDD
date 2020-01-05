@@ -46,19 +46,13 @@ class FileReaderSpec: QuickSpec {
             }
 
             describe("read") {
-                var fileURL: URL!
                 var fileContents: String?
 
                 beforeEach {
-                    fileURL = FileManager.default.documentsURL?.appendingPathComponent("a-021-293-121-test.txt")
-                    try! "FILE CONTENTS".write(to: fileURL, atomically: true, encoding: .utf8)
-
                     fileContents = try? sut.read(path: "a-021-293-121-test.txt")
                 }
 
                 afterEach {
-                    try! FileManager.default.removeItem(at: fileURL)
-                    fileURL = nil
                     fileContents = nil
                 }
 

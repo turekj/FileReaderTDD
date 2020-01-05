@@ -2,7 +2,7 @@ import Nimble
 import Quick
 @testable import FileReaderTDD
 
-func fileReader(path: String, fileManager: FileManager = .default) throws -> String {
+func fileReader(path: String, fileManager: FileManaging = FileManager.default) throws -> String {
     guard let documentsURL = fileManager.documentsURL?.appendingPathComponent(path) else {
         fatalError()
     }

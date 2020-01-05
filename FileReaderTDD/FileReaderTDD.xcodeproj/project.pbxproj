@@ -19,7 +19,9 @@
 		8C2B666A23C24C69003D4306 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8C2B666623C24C41003D4306 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8C2B666B23C24C69003D4306 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8C2B666523C24C41003D4306 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8C2B666D23C25163003D4306 /* FileManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B666C23C25163003D4306 /* FileManagerSpec.swift */; };
-		8C2B667023C252B1003D4306 /* FileManager+DocumentsURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B666F23C252B1003D4306 /* FileManager+DocumentsURL.swift */; };
+		8C2B667323C2561D003D4306 /* FileManaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B667223C2561D003D4306 /* FileManaging.swift */; };
+		8C2B667523C2563E003D4306 /* FileManager+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B667423C2563E003D4306 /* FileManager+Protocol.swift */; };
+		8C2B667623C2572A003D4306 /* FileManaging+DocumentsURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B666F23C252B1003D4306 /* FileManaging+DocumentsURL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +63,9 @@
 		8C2B666523C24C41003D4306 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		8C2B666623C24C41003D4306 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		8C2B666C23C25163003D4306 /* FileManagerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerSpec.swift; sourceTree = "<group>"; };
-		8C2B666F23C252B1003D4306 /* FileManager+DocumentsURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+DocumentsURL.swift"; sourceTree = "<group>"; };
+		8C2B666F23C252B1003D4306 /* FileManaging+DocumentsURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManaging+DocumentsURL.swift"; sourceTree = "<group>"; };
+		8C2B667223C2561D003D4306 /* FileManaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManaging.swift; sourceTree = "<group>"; };
+		8C2B667423C2563E003D4306 /* FileManager+Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Protocol.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 		8C2B664123C24B00003D4306 /* FileReaderTDD */ = {
 			isa = PBXGroup;
 			children = (
+				8C2B667123C2560B003D4306 /* Protocols */,
 				8C2B666E23C252A4003D4306 /* Extensions */,
 				8C2B664223C24B00003D4306 /* AppDelegate.swift */,
 				8C2B664423C24B00003D4306 /* SceneDelegate.swift */,
@@ -140,9 +145,18 @@
 		8C2B666E23C252A4003D4306 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				8C2B666F23C252B1003D4306 /* FileManager+DocumentsURL.swift */,
+				8C2B666F23C252B1003D4306 /* FileManaging+DocumentsURL.swift */,
+				8C2B667423C2563E003D4306 /* FileManager+Protocol.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8C2B667123C2560B003D4306 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8C2B667223C2561D003D4306 /* FileManaging.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,10 +261,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C2B667023C252B1003D4306 /* FileManager+DocumentsURL.swift in Sources */,
+				8C2B667623C2572A003D4306 /* FileManaging+DocumentsURL.swift in Sources */,
+				8C2B667323C2561D003D4306 /* FileManaging.swift in Sources */,
 				8C2B664723C24B00003D4306 /* ViewController.swift in Sources */,
 				8C2B664323C24B00003D4306 /* AppDelegate.swift in Sources */,
 				8C2B664523C24B00003D4306 /* SceneDelegate.swift in Sources */,
+				8C2B667523C2563E003D4306 /* FileManager+Protocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

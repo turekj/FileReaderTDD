@@ -1,6 +1,6 @@
 import Foundation
 
-extension FileManager {
+extension FileManaging {
     var documentsURL: URL? {
         return urls(for: .documentDirectory, in: .userDomainMask).last
     }

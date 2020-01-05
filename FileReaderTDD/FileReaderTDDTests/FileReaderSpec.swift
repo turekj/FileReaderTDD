@@ -10,6 +10,7 @@ func fileReader(path: String) -> String? {
 class FileReaderSpec: QuickSpec {
     override func spec() {
         describe("fileReader") {
+            var documentsURL: String?
             var fileContents: String?
 
             beforeEach {
@@ -18,6 +19,10 @@ class FileReaderSpec: QuickSpec {
 
             afterEach {
                 fileContents = nil
+            }
+
+            it("should return documents URL") {
+                expect(documentsURL).toNot(beNil())
             }
 
             it("should return content read from a file") {

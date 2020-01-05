@@ -2,7 +2,11 @@ import Nimble
 import Quick
 
 func dropPrefix(_ prefix: String, from string: String) -> String {
-    return "_string"
+    guard string.hasPrefix(prefix) else {
+        return string
+    }
+
+    return String(string.dropFirst(prefix.count))
 }
 
 class DropPrefixSpec: QuickSpec {

@@ -11,7 +11,7 @@ class FileReader {
 
     func read(path: String) throws -> String {
         guard let documentsURL = fileManager.documentsURL?.appendingPathComponent(path) else {
-            fatalError()
+            throw FileReaderError.missingDocumentsURL
         }
 
         do {

@@ -2,8 +2,12 @@ import Nimble
 import Quick
 @testable import FileReaderTDD
 
-func fileReader(path: String) -> String? {
-    return "FILE CONTENTS"
+func fileReader(path: String) throws -> String {
+    guard let documentsURL = FileManager.default.documentsURL?.appendingPathComponent(path) else {
+        fatalError()
+    }
+
+    return try String(contentsOf: documentsURL)
 }
 
 class FileReaderSpec: QuickSpec {
@@ -16,7 +20,7 @@ class FileReaderSpec: QuickSpec {
                 fileURL = FileManager.default.documentsURL?.appendingPathComponent("a-021-293-121-test.txt")
                 try! "FILE CONTENTS".write(to: fileURL, atomically: true, encoding: .utf8)
 
-                fileContents = fileReader(path: "a-021-293-121-test.txt")
+                fileContents = try? fileReader(path: "a-021-293-121-test.txt")
             }
 
             afterEach {

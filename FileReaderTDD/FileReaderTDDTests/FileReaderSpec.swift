@@ -62,6 +62,13 @@ class FileReaderSpec: QuickSpec {
                         expect(fileContents) == "FILE CONTENTS"
                     }
                 }
+
+                context("with non-existing file") {
+                    it("should throw FileReaderError.missingFile error") {
+                        expect { _ = try sut.read(path: "non-existing-file.txt") }
+                            .to(throwError(FileReaderError.missingFile(path: "/var/data/documents/non-existing-file.txt")))
+                    }
+                }
             }
         }
     }

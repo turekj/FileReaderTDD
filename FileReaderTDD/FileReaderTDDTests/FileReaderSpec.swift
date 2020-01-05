@@ -2,12 +2,14 @@ import Nimble
 import Quick
 @testable import FileReaderTDD
 
-func fileReader(path: String, fileManager: FileManaging = FileManager.default) throws -> String {
+func fileReader(path: String,
+                fileManager: FileManaging = FileManager.default,
+                urlReader: (URL) throws -> String = String.init(contentsOf:)) throws -> String {
     guard let documentsURL = fileManager.documentsURL?.appendingPathComponent(path) else {
         fatalError()
     }
 
-    return try String(contentsOf: documentsURL)
+    return try urlReader(documentsURL)
 }
 
 class FileReaderSpec: QuickSpec {

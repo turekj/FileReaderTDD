@@ -1,6 +1,12 @@
 import Nimble
 import Quick
 
+extension FileManager {
+    var documentsURL: URL? {
+        return urls(for: .documentDirectory, in: .userDomainMask).last
+    }
+}
+
 class FileManagerSpec: QuickSpec {
     override func spec() {
         describe("FileManager") {
@@ -18,7 +24,7 @@ class FileManagerSpec: QuickSpec {
                 var documentsURL: URL?
 
                 beforeEach {
-                    documentsURL = sut.urls(for: .documentDirectory, in: .userDomainMask).last
+                    documentsURL = sut.documentsURL
                 }
 
                 it("should return documents URL") {

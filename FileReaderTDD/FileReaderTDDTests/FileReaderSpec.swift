@@ -27,6 +27,7 @@ class FileReader {
 
 enum FileReaderError: Equatable, Error {
     case missingFile(path: String)
+    case missingDocumentsURL
 }
 
 class FileReaderSpec: QuickSpec {

@@ -21,6 +21,10 @@ class FileReader {
     private let urlReader: (URL) throws -> String
 }
 
+enum FileReaderError: Equatable, Error {
+    case missingFile(path: String)
+}
+
 class FileReaderSpec: QuickSpec {
     override func spec() {
         describe("FileReader") {

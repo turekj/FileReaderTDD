@@ -4,7 +4,7 @@ import XCTest
 @testable import FileReaderTDD
 
 func fileReader(path: String) -> String? {
-    return ""
+    return "FILE CONTENTS"
 }
 
 class FileReaderSpec: QuickSpec {

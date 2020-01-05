@@ -77,6 +77,17 @@ class FileReaderSpec: QuickSpec {
                             .to(throwError(FileReaderError.missingFile(path: "/var/data/documents/non-existing-file.txt")))
                     }
                 }
+
+                context("with file manager unable to resolve documents URL") {
+                    beforeEach {
+                        fileManager.stubbedDocumentsURLs = []
+                    }
+
+                    it("should throw FileReaderError.missingDocumentsURL error") {
+                        expect { _ = try sut.read(path: "non-existing-file.txt") }
+                            .to(throwError(FileReaderError.missingDocumentsURL))
+                    }
+                }
             }
         }
     }

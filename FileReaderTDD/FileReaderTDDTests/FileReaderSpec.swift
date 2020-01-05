@@ -22,6 +22,7 @@ class FileReaderSpec: QuickSpec {
 
             it("should return content read from a file") {
                 expect(fileContents).toNot(beNil())
+                expect(fileContents) == "FILE CONTENTS"
             }
         }
     }
